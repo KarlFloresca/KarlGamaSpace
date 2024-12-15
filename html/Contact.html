@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="../css/contacts.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <title>Contacts</title>
+</head>
+<body>  
+  <nav class="navigationBar">
+    <h2>Welcome to my Game<span class="colored">Space</span></h2>
+    <button class="menu-toggle" aria-label="Toggle navigation menu">
+      ☰
+  </button> 
+    <ul class="tabs">
+        <li>
+            <img src="../assets/icons/iconHome.png" alt="" class="im">
+            <a href="../index.html">Home</a>
+        </li>
+        <li>
+            <img src="../assets/icons/iconExp.png" alt="">
+            <a href="../index.html#experience">Experiences</a>
+        </li> 
+        <li>
+            <img src="../assets/icons/iconFamily.png" alt="">
+            <a href="../index.html#projects">Projects</a>
+        </li> 
+        <li> 
+            <img src="../assets/icons/iconProject.png" alt="">
+            <a href="../index.html#Skills">Skills</a>
+        </li>
+        <li>
+            <img src="../assets/icons/iconGallery.png" alt="">
+            <a href="./Gallery.html">Gallery </a>
+        </li>
+        <li>
+            <img src="../assets/icons/iconContact.png" alt="">
+            <a href="./Contact.html">Contacts</a>
+        </li>
+    </ul>
+</nav>
+  <h1 class="HEAD">Here are my contact information</h1>
+<main>
+    
+  
+    <footer>
+      <section class="mail">
+        <div>
+          
+          <h3><img src="../assets/icons/iconEmail.png" alt=""class="icons">  My Email</h3>
+          
+          <p>flarescakarl@gmail.com</p>
+          <p>
+            <a href="mailto:flarescakarl@gmail.com" target="_blank"
+              >Mail me by <span>clicking</span> here</a
+            >
+          </p>
+        </div>
+      </section>
+  
+      <section class="fb">
+        <div>
+           
+          <h3> <img src="../assets/icons/iconFB.png" alt=""class="icons"> Social media accounts</h3>
+          <p>Karl Anthony T. Floresca</p>
+          <p>
+            <i class="fa-brands fa-facebook-messenger"></i>
+            <a href="https://www.facebook.com/karl.floresca.90/" target="_blank"
+              >Here is my <span>social account</span></a
+            >
+          </p>
+        </div>
+      </section>
+
+      <section class="git">
+        <div>
+          <h3><img src="../assets/icons/iconGitHub.png" alt=""class="icons"> My GitHub Account</h3>
+          <p>
+            Github: <a href="https://github.com/KarlFloresca" target="_blank"><span>Karl Floresca</span></a>
+          </p>
+        </div>
+      </section>
+  
+      <section class="num">
+        <div>
+          <h3><img src="../assets/icons/iconContact.png" alt="" class="icons"> Calling information</h3>
+          <p>
+            Contact number: <span>09106703716</span>
+          </p>
+        </div>
+      </section>
+    </footer>
+  
+    <div class="copyright">
+      © 2024 Karl Anthony T. Floresca. All rights reserved.
+    </div>
+  </main>
+  <div class="bubbleContainer">
+    <img src="../assets/icons/bubble.png" alt="" class="animatedBubble" onclick="popBubble(this)">
+    <img src="../assets/icons/bubble.png" alt="" class="animatedBubble" onclick="popBubble(this)">
+    <img src="../assets/icons/bubble.png" alt="" class="animatedBubble" onclick="popBubble(this)">
+    <img src="../assets/icons/bubble.png" alt="" class="animatedBubble" onclick="popBubble(this)">
+    <img src="../assets/icons/bubble.png" alt="" class="animatedBubble" onclick="popBubble(this)">
+</div>
+
+</body>
+
+<script>
+  function toggleNav() {
+      const navBar = document.querySelector('.navigationBar');
+      
+      navBar.classList.toggle('disabled');  // Toggle disabling the navigation bar
+      navBar.classList.toggle('active');  // Toggle visibility or activation
+  }
+
+
+    function popBubble(bubble) {
+      const rect = bubble.getBoundingClientRect();
+      const x = rect.left + rect.width / 2;
+      const y = rect.top + rect.height / 2;
+
+      bubble.style.position = 'absolute';
+      bubble.style.left = `${x - 25}px`;  // Adjusted to center the bubble
+      bubble.style.top = `${y - 25}px`;   // Adjusted to center the bubble
+
+      // Trigger the pop effect
+      bubble.classList.add('popped');
+
+      // Play a popping sound
+      const audio = new Audio('./assets/sfx/pop.mp3');
+      audio.play();
+
+      setTimeout(() => {
+          bubble.remove();
+      }, 500); 
+    }
+  function createBubble() {
+    const bubble = document.createElement("img");
+    bubble.src = "../assets/icons/bubble.png";
+    bubble.classList.add("animatedBubble");
+    bubble.style.position = 'absolute'
+
+    // Set a random horizontal position
+    bubble.style.setProperty("--random-x", Math.random());
+    bubble.onclick = function () {
+      popBubble(bubble);
+    };
+    // Append bubble to the container
+    const bubbleContainer = document.querySelector(".bubbleContainer");
+    bubbleContainer.appendChild(bubble);
+
+    // Remove bubble after animation ends
+    setTimeout(() => {
+        bubble.remove();
+    }, 7000); // Match the duration of the animation
+  }
+
+  // Generate bubbles at intervals
+  setInterval(createBubble, 1000); 
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const tabs = document.querySelector(".tabs");
+
+        menuToggle.addEventListener("click", () => {
+            tabs.classList.toggle("active");  
+        });
+    });
+
+</script>
+</html>

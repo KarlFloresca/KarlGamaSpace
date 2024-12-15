@@ -1,0 +1,309 @@
+.Projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.Projects div {
+    position: relative;
+    width: 380px;
+    height: 280px;
+    background-color: #74b7ff5f;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.429);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.Projects img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.Projects a {
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    font-size: 18px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px 50px;
+    border-radius: 5px;
+    display: none;
+}
+
+.Projects .click-me {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    color: rgb(200, 214, 255);
+    font-size: 25px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.Projects div:hover .click-me {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Projects div:hover a {
+    display: block;
+    animation: slideIn .5s ease-in-out;
+}
+
+.Projects div:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.7);
+    background-color: #64a4ff;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+.material {
+    padding: 20px;
+    background-image: url(../assets/img/spaceBG2.png);
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    background-size: cover;
+    border-radius: 0px;
+    display: flex; /* Center everything within the material div */
+    flex-direction: column;
+    align-items: center; /* Align content to the center horizontally */
+    justify-content: center; /* Align content to the center vertically */
+}
+
+.languages, .tools, .learning {
+    margin-bottom: 30px;
+    width: 100%; /* Make the sections take full width */
+    max-width: 1200px; /* Limit width for better layout on larger screens */
+}
+
+.languages ul, .tools ul, .learning ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Automatically adjust number of columns */
+    gap: 20px;
+    padding: 0;
+    list-style-type: none;
+    justify-items: center;
+    align-items: center; /* Vertically center the items */
+    justify-content: center; /* Horizontally center the grid */
+}
+
+.languages li, .tools li, .learning li {
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content within each <li> */
+    justify-content: center; /* Ensure content is centered vertically in each <li> */
+    border: 2px solid transparent; /* Add a border for hover effect */
+    border-radius: 10px;
+    transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.PLanguageIcon, .toolIcon, .learningIcom {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.langName, .toolName, .learningName {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Enhanced hover effect */
+.languages li:hover, .tools li:hover, .learning li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #6c63ff; /* Add a glowing border effect */
+    box-shadow: 0px 4px 10px rgba(108, 99, 255, 0.6); /* Add a glowing shadow */
+    transform: scale(1.05); /* Slightly increase the size on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.languages li:hover .langName,
+.tools li:hover .toolName,
+.learning li:hover .learningName {
+    color: #6c63ff; /* Change text color on hover */
+    text-shadow: 0 0 8px #6c63ff, 0 0 16px #6c63ff, 0 0 32px rgba(108, 99, 255, 0.6); /* Glowing text shadow */
+}
+
+.languages li img, .tools li img, .learning li img {
+    transition: transform 0.3s ease;
+}
+
+.languages li:hover img, .tools li:hover img, .learning li:hover img {
+    transform: scale(1.2); /* Slightly increase image size on hover */
+    filter: brightness(1.2); /* Make images slightly brighter on hover */
+}
+
+/* Mobile (320px and below) */
+@media screen and (max-width: 320px) {
+    .Projects {
+        gap: 30px; /* Reduce gap between items */
+    }
+
+    .Projects div {
+        width: 100%; /* Make project containers full width */
+        height: auto; /* Let height adjust automatically */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    .Projects img {
+        width: 100%; /* Ensure the image takes up full width */
+        height: auto; /* Let image height adjust automatically */
+    }
+
+    .Projects a {
+        font-size: 14px; /* Smaller text size for the link */
+        padding: 30px; /* Adjust padding */
+    }
+
+    .Projects .click-me {
+        font-size: 18px; /* Smaller text size for click-me */
+        bottom: 15px; /* Adjust position */
+    }
+
+    .Projects div:hover .click-me {
+        font-size: 18px; /* Ensure the click-me text size stays consistent */
+    }
+
+    .Projects div:hover {
+        transform: scale(1.03) rotate(0); /* Smaller scale and no rotation */
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5); /* Reduce shadow effect */
+    }
+
+    .material {
+        padding: 10px; /* Reduce padding */
+        background-size: cover;
+    }
+
+    .languages ul, .tools ul, .learning ul {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Adjust grid for smaller screens */
+        gap: 10px; /* Reduce gap */
+    }
+
+    .languages li, .tools li, .learning li {
+        padding: 10px; /* Reduce padding */
+    }
+
+    .PLanguageIcon, .toolIcon, .learningIcom {
+        width: 60px; /* Smaller icons */
+        height: 60px; /* Smaller icons */
+    }
+
+    .langName, .toolName, .learningName {
+        font-size: 0.8rem; /* Smaller text */
+    }
+
+    .languages li:hover, .tools li:hover, .learning li:hover {
+        transform: scale(1.03); /* Smaller scale on hover */
+    }
+
+    .languages li img, .tools li img, .learning li img {
+        transition: transform 0.3s ease;
+        transform: scale(1.1); /* Slightly increase image size */
+    }
+
+    .languages li:hover img, .tools li:hover img, .learning li:hover img {
+        transform: scale(1.1); /* Keep the image scaling consistent */
+    }
+}
+
+/* Tablet (768px and below) */
+@media screen and (max-width: 768px) {
+    .Projects {
+        gap: 40px; /* Slightly reduce gap for tablets */
+    }
+
+    .Projects div {
+        width: 45%; /* Make the project containers take up less space */
+        height: auto; /* Let height adjust automatically */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .Projects a {
+        font-size: 16px; /* Slightly smaller font size */
+        padding: 40px; /* Adjust padding */
+    }
+
+    .Projects .click-me {
+        font-size: 22px; /* Slightly larger font size */
+    }
+
+    .Projects div:hover .click-me {
+        font-size: 22px; /* Keep consistent */
+    }
+
+    .Projects div:hover {
+        transform: scale(1.05) rotate(0); /* Slightly larger scale */
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6); /* Slightly larger shadow effect */
+    }
+
+    .material {
+        padding: 15px; /* Adjust padding */
+        background-size: cover;
+    }
+
+    .languages ul, .tools ul, .learning ul {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust grid for tablets */
+        gap: 15px; /* Slightly reduce gap */
+    }
+
+    .languages li, .tools li, .learning li {
+        padding: 12px; /* Adjust padding */
+    }
+
+    .PLanguageIcon, .toolIcon, .learningIcom {
+        width: 70px; /* Slightly smaller icons */
+        height: 70px; /* Slightly smaller icons */
+    }
+
+    .langName, .toolName, .learningName {
+        font-size: 0.9rem; /* Slightly larger text */
+    }
+
+    .languages li:hover, .tools li:hover, .learning li:hover {
+        transform: scale(1.05); /* Slightly increase scale on hover */
+    }
+
+    .languages li img, .tools li img, .learning li img {
+        transition: transform 0.3s ease;
+        transform: scale(1.15); /* Slightly larger scale */
+    }
+
+    .languages li:hover img, .tools li:hover img, .learning li:hover img {
+        transform: scale(1.15); /* Keep consistent scaling on hover */
+    }
+}

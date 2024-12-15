@@ -1,0 +1,157 @@
+/* Default (for larger screens) */
+.Experience {
+  position: relative;
+  margin-top: 2rem;
+  width: 100%;
+  height: auto; /* Fixed height for consistent layout */
+  overflow: hidden;
+}
+
+.experienceList::-webkit-scrollbar {
+  display: none;
+}
+
+.experienceList {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden;
+  height: 100%;
+  white-space: nowrap; /* Prevent wrapping of the flex container */
+  align-items: flex-start;
+}
+
+.experienceList div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #74b7ff5f;
+  padding: 30px;
+  min-width: 40rem; /* Keep a consistent width for each item */
+  height: 25rem;
+  border-radius: 30px;
+  border: 3px solid rgb(48, 130, 193);
+}
+
+.experienceList img,
+.experienceList video {
+  width: 100%;
+  height: 300px; /* Adjust height for consistent size */
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.experienceList p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ffffff;
+  max-width: 550px; /* Limit text width */
+  white-space: normal; /* Allow text wrapping */
+  word-wrap: break-word; /* Break long words */
+  overflow: hidden; /* Prevent text overflow */
+  text-align: center;
+  line-height: 1.5; /* Better readability */
+}
+
+.controls {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+#controlButton {
+  font-size: larger;
+  padding: 10px 35px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+#controlButton:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile (320px and below) */
+@media screen and (max-width: 320px) {
+  .experienceList {
+    gap: 10px; /* Reduce the gap between items */
+  }
+
+  .experienceList div {
+    min-width: 100%; /* Make each item full width */
+    padding: 15px; /* Adjust padding */
+    height: auto; /* Let the height adjust based on content */
+  }
+
+  .experienceList img,
+  .experienceList video {
+    height: 200px; /* Adjust image/video height */
+  }
+
+  .experienceList p {
+    font-size: 14px; /* Smaller text size */
+    max-width: 90%; /* Reduce max width */
+  }
+
+  #controlButton {
+    padding: 8px 25px; /* Adjust button size */
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+}
+/* Mobile (320px and below) */
+@media screen and (max-width: 320px) {
+  .experienceList {
+    gap: 10px; /* Reduce the gap between items */
+    height: auto;
+  }
+
+  .experienceList div {
+    min-width: 100%; /* Make each item full width */
+    padding: 15px; /* Adjust padding */
+    height: auto; /* Let height adjust based on content */
+  }
+
+  .experienceList img,
+  .experienceList video {
+    height: 200px; /* Adjust image/video height */
+  }
+
+  .experienceList p {
+    font-size: 12px; /* Smaller text size */
+    max-width: 100%; /* Ensure text width fits */
+    word-wrap: break-word; /* Ensure long words wrap */
+    white-space: normal; /* Allow wrapping */
+    overflow: visible; /* Ensure no clipping */
+  }
+}
+
+/* Tablet (768px and below) */
+@media screen and (max-width: 768px) {
+  .experienceList {
+    gap: 15px; /* Reduce the gap for tablets */
+  }
+
+  .experienceList div {
+    min-width: 70%; /* Reduce width of items to fit two in a row */
+    padding: 20px; /* Adjust padding */
+    height: auto; /* Let height adjust based on content */
+  }
+
+  .experienceList img,
+  .experienceList video {
+    height: 250px; /* Adjust height for tablet */
+  }
+
+  .experienceList p {
+    font-size: 16px; /* Adjust font size for readability */
+    max-width: 100%; /* Ensure text fits within container */
+    word-wrap: break-word; /* Break long words */
+    white-space: normal; /* Allow text wrapping */
+    overflow: visible; /* Prevent clipping */
+  }
+}

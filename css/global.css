@@ -1,0 +1,255 @@
+/* Base Styles */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'pixelFont', 'Poppins', sans-serif;
+    letter-spacing: 3px; 
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'pixelFont';
+    src: url('../assets/fonts/Minecraft.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    background-color: #ffffff;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+li {
+    padding-left: 4rem;
+    gap: 1rem;
+}
+
+li img {
+    image-rendering: pixelated; 
+    image-rendering: crisp-edges; 
+    image-rendering: -moz-crisp-edges;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+}
+
+/* Navigation Bar */
+.navigationBar {
+    top: 0;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    width: 100%;
+    background-color: #121212;          
+    color: rgb(255, 255, 255);
+    z-index: 100;
+    position: fixed;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+/* Footer */
+.copyright {
+    background-color: rgb(49, 49, 49);
+    height: auto;
+    padding: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+/* Divider */
+.divider {
+    width: auto;
+    padding: 2rem;
+    background-color: #161616;
+    color: rgb(151, 151, 255);
+    text-align: center;
+    font-size: 2.5em;
+}
+
+/* Sub Div */
+.subDiv {
+    width: 80%;
+    max-width: 30rem;
+    font-size: 2em; /* Adjusted for pixelated font */
+    margin: 2rem auto;
+    padding: 1rem;
+    color: #00ffcc; /* Neon cyan for retro look */
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'PressStart2P', sans-serif; /* Use pixelated font */
+    animation: glitch 1.5s infinite;
+    background: repeating-linear-gradient(
+        45deg,
+        #1a1a1a,
+        #1a1a1a 10px,
+        #333333 10px,
+        #333333 20px
+    );
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Animations */
+@keyframes glitch {
+    0% {
+        text-shadow: 
+            2px 2px #ff0055,
+            -2px -2px #00ffcc;
+    }
+    20% {
+        text-shadow: 
+            4px -2px #ff0055,
+            -4px 2px #00ffcc;
+    }
+    40% {
+        text-shadow: 
+            -2px 2px #ff0055,
+            2px -2px #00ffcc;
+    }
+    60% {
+        text-shadow: 
+            1px -1px #ff0055,
+            -1px 1px #00ffcc;
+    }
+    100% {
+        text-shadow: 
+            2px 2px #ff0055,
+            -2px -2px #00ffcc;
+    }
+}
+
+.subDiv:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #333333, #1a1a1a);
+    box-shadow: 
+        0 0 15px #ff0055,
+        0 0 25px #00ffcc inset;
+    transition: all 0.3s ease;
+}
+
+section {
+    opacity: 0; 
+    animation: slideIn 1s ease forwards; 
+    animation-delay: var(--animation-delay);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    
+    .navigationBar {
+        flex-direction: column;
+        align-items: flex-start;
+        
+        padding: 20px;
+    }
+    .tabs{
+        gap: 1rem;
+    }
+   
+
+    li {
+        padding-left: 0rem;
+    }
+
+    a {
+        font-size: 0.9rem;
+    }
+
+    .divider {
+        font-size: 2rem;
+        padding: 1.5rem;
+    }
+
+    .subDiv {
+        font-size: 1.5em;
+        width: 90%;
+    }
+
+    .copyright {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+}@media (max-width: 320px) {
+    .navigationBar {
+        width: auto;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .tabs {
+        display: none;
+        flex-direction: column;
+        gap: 0.8rem; /* Reduced gap for smaller screens */
+        width: 70%; /* Adjusted width to fit better on small screens */
+        height: 100vh;
+        background-color: #121212;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        padding: 1rem;
+        box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+        transition: left 0.3s ease-in-out;
+        z-index: 200;
+    }
+
+    .tabs li {
+        left: 8px; /* Adjusted for better positioning */
+    }
+
+    .tabs.active {
+        display: flex;
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 8px; /* Adjusted for better positioning */
+        right: 30px; /* Adjusted for better positioning */
+        font-size: 1.4rem; /* Slightly smaller font */
+        color: #ffffff;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 300;
+    }
+
+    .divider {
+        font-size: 1.6rem; /* Slightly smaller font for the divider */
+    }
+
+    .subDiv {
+        font-size: 1.1em; /* Slightly smaller font */
+        padding: 0.6rem; /* Reduced padding */
+    }
+
+    .copyright {
+        font-size: 0.7rem; /* Smaller font for copyright */
+    }
+}
+

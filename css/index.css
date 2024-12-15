@@ -1,0 +1,665 @@
+@font-face {
+    font-family: 'pixelFont';
+    src: url('../assets/fonts/Minecraft.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'pixelFont', 'Poppins', sans-serif;
+    letter-spacing: 3px; 
+}
+
+
+html{
+    background-color: #ffffff;
+    
+}
+h2{
+    
+    font-weight: 600;
+}
+li{
+    padding-left: 4rem;
+}
+li img{
+    image-rendering: pixelated; 
+    image-rendering: crisp-edges; 
+    image-rendering: -moz-crisp-edges;
+}
+a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+}
+
+.colored{
+    color: rgb(186, 171, 255);
+}
+
+.Profile{
+    margin: 20px 50px;
+    width: 20rem;
+    height: 32rem;
+    border-radius: 10px;
+    padding: 2rem;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-image: url(../assets/img/imgProfilebg.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+.picture {
+  width: 250px;
+  height: 250px;
+  margin-top: 2em;
+  object-fit: cover;
+  image-rendering: auto;
+  border: 5px solid rgb(0, 0, 0);
+}
+
+.Profile h3{
+    padding-top: 4em;
+    margin: auto;
+    color: rgb(155, 149, 255);
+} 
+
+.Profile p{
+    padding-top: 1em;
+    margin: auto
+}
+
+.btnChangeDes{
+    background-color: transparent;
+    border-style: none;
+}
+.btnChangeDes img{
+    image-rendering: pixelated;
+    width: 200px;
+}
+
+
+.About{
+    background-image: url("../assets/img/newBG.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    image-rendering: pixelated; 
+    image-rendering: crisp-edges; 
+    padding: 10rem 0rem;
+    display: flex;
+    align-items: center;
+    padding-top: 8em;
+}
+
+.Aboutdescription {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.664);
+    width: 27em;
+    height: 14em;
+    padding: 30px;
+    border: 5px dashed white; 
+}
+.Aboutdescription p{
+    font-family: 'Poppins';
+    font-size: 15px;
+    line-height: 25px;
+    text-indent: 2em;
+    text-align: justify;
+}
+.Aboutdescription h6{
+    font-family: 'Poppins';
+    color: rgb(147, 147, 255);
+}
+
+.UnderwaterArea{
+  background-image: url(../assets/img/ContactsBG.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated; 
+  image-rendering: crisp-edges; 
+  width: auto;
+  height: auto;
+}
+.Hobbies{
+    
+    display: flex;
+    gap: 30px;
+}
+.hobbyContainer {
+    display: flex;
+    margin: 20px auto;
+    align-items: center;
+    justify-content: flex-start;
+    width: 70%;
+    background-color: rgba(0, 98, 255, 0.40);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hobbyIcon {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+  
+  .Hobbydescription {
+    font-size: 22px;
+    margin: 20px;
+    overflow: hidden;
+    word-wrap: break-word;
+    animation: typing 2s steps(20, end);
+    left: 40px;
+    line-height: 2em;
+    color: white;
+  }
+
+  .talents {
+    display: flex;
+    margin: 20px auto;
+    align-items: center;
+    justify-content: flex-start;
+    width: 70%;
+    background-color: rgba(0, 98, 255, 0.40);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .talentsIcon {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+  
+  .talentsDescription {
+    font-size: 22px;
+    margin: 20px;
+    overflow: hidden;
+    word-wrap: break-word;
+    animation: typing 2s steps(20, end);
+    left: 40px;
+    line-height: 2em;
+    color: white;
+  }
+
+  .ufo {
+    position: absolute;
+    transition: opacity 0.5s ease;
+    width: 130px;
+    image-rendering: pixelated;
+    z-index: 100;
+  }
+  
+  .ufo:nth-child(1) {
+    animation: float 100s infinite;
+    animation-delay: 0s;
+    position: fixed;
+  }
+
+  .ufo:nth-child(2) {
+    right: 0;
+    animation: float2 80s infinite;
+    animation-delay: 0s;
+    position: fixed;
+  }
+
+  .ufo:nth-child(3) {
+    right: 0;
+    animation: float3 70s infinite;
+    animation-delay: .5s;
+    position: fixed;
+  }
+
+  .UnderwaterArea {
+    position: relative;
+    height: auto; /* Set a height for the area */
+    overflow: hidden; /* Ensure bubbles stay within the area */
+  }
+
+  .bubbleContainer {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0; /* Place the container at the bottom of the underwater area */
+    width: 100%;
+    height: 100%; /* Allow bubbles to animate upward through the entire area */
+}
+
+/* Bubble styles */
+.animatedBubble {
+  width: 40px;
+  position: absolute;
+  bottom: 0; /* Start bubbles at the bottom */
+  animation: bubbleAnimation 10s infinite ease-in-out; /* Apply the bubble animation */
+  opacity: 1; /* Fully visible initially */
+  cursor: pointer;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  left: calc(var(--random-x) * 100%);
+  z-index: 10;
+}
+/* Bubble animation */
+@keyframes bubbleAnimation {
+  0% {
+      transform: translate(0, 0) scale(1); /* Start at original size and position */
+      opacity: 1; /* Fully visible */
+  }
+  25% {
+      transform: translate(-20px, -600px) scale(1.2); /* Sway left slightly and grow */
+  }
+  50% {
+      transform: translate(20px, -900px) scale(1.5); /* Sway right and grow more */
+  }
+  75% {
+      transform: translate(-10px, -1500px) scale(1.8); /* Sway back left and grow more */
+  }
+  100% {
+      transform: translate(0, -1500px) scale(2); /* End upward and grow largest */
+      opacity: 0; /* Fade out at the top */
+  }
+}
+
+.animatedBubble.popped {
+  transform: scale(5);
+  opacity: 0;
+}
+
+  @keyframes typing { 
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes float {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    5% {
+      transform: translate(750px, 375px);
+    }
+    10% {
+      transform: translate(1200px, -600px);
+    }
+    15% {
+      transform: translate(375px, 1125px);
+    }
+    20% {
+      transform: translate(-600px, 1200px);
+    }
+    25% {
+      transform: translate(825px, -700px);
+    }
+    30% {
+      transform: translate(1000px, 750px);
+    }
+    35% {
+      transform: translate(300px, 375px);
+    }
+    40% {
+      transform: translate(-250px, -600px);
+    }
+    45% {
+      transform: translate(375px, 1500px);
+    }
+    50% {
+      transform: translate(-600px, 750px);
+    }
+    55% {
+      transform: translate(1200px, -600px);
+    }
+    60% {
+      transform: translate(1500px, 1125px);
+    }
+    65% {
+      transform: translate(-600px, -375px);
+    }
+    70% {
+      transform: translate(1125px, 1200px);
+    }
+    75% {
+      transform: translate(-600px, 375px);
+    }
+    80% {
+      transform: translate(750px, -600px);
+    }
+    85% {
+      transform: translate(375px, 1500px);
+    }
+    90% {
+      transform: translate(-600px, 1125px);
+    }
+    95% {
+      transform: translate(1500px, -600px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+
+  @keyframes float2 {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    5% {
+      transform: translate(-1250px, -805px);
+    }
+    10% {
+      transform: translate(-400px, -300px);
+    }
+    15% {
+      transform: translate(-375px, 1125px);
+    }
+    20% {
+      transform: translate(600px, 1200px);
+    }
+    25% {
+      transform: translate(-1125px, -375px);
+    }
+    30% {
+      transform: translate(-1500px, 750px);
+    }
+    35% {
+      transform: translate(600px, 375px);
+    }
+    40% {
+      transform: translate(-750px, -600px);
+    }
+    45% {
+      transform: translate(-375px, 1500px);
+    }
+    50% {
+      transform: translate(600px, 750px);
+    }
+    55% {
+      transform: translate(-1200px, -600px);
+    }
+    60% {
+      transform: translate(-1500px, 1125px);
+    }
+    65% {
+      transform: translate(600px, -375px);
+    }
+    70% {
+      transform: translate(-1125px, 1200px);
+    }
+    75% {
+      transform: translate(600px, 375px);
+    }
+    80% {
+      transform: translate(-750px, -600px);
+    }
+    85% {
+      transform: translate(-375px, 1500px);
+    }
+    90% {
+      transform: translate(600px, 1125px);
+    }
+    95% {
+      transform: translate(-1500px, -600px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+
+
+  @keyframes float3 {
+      0% {
+          transform: translate(0px, 0px);
+      }
+      5% {
+          transform: translate(-900px, 50px);
+      }
+      10% {
+          transform: translate(-200px, -150px);
+      }
+      15% {
+          transform: translate(-350px, 300px);
+      }
+      20% {
+          transform: translate(300px, 600px);
+      }
+      25% {
+          transform: translate(-600px, -200px);
+      }
+      30% {
+          transform: translate(-800px, 400px);
+      }
+      35% {
+          transform: translate(300px, 200px);
+      }
+      40% {
+          transform: translate(-400px, -300px);
+      }
+      45% {
+          transform: translate(-150px, 700px);
+      }
+      50% {
+          transform: translate(300px, 400px);
+      }
+      55% {
+          transform: translate(-600px, -300px);
+      }
+      60% {
+          transform: translate(-800px, 600px);
+      }
+      65% {
+          transform: translate(300px, -200px);
+      }
+      70% {
+          transform: translate(-600px, 700px);
+      }
+      75% {
+          transform: translate(300px, 200px);
+      }
+      80% {
+          transform: translate(0px, -300px);
+      }
+      85% {
+          transform: translate(-150px, 700px);
+      }
+      90% {
+          transform: translate(300px, 500px);
+      }
+      95% {
+          transform: translate(-800px, -300px);
+      }
+      100% {
+          transform: translate(0px, 0px);
+      }
+  }
+  
+
+
+@keyframes crash {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+ 
+    100% {
+        transform: scale(0.5) rotate(360deg);
+        opacity: 0;
+        width: 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .Profile {
+      width: 80%;
+      height: auto;
+      margin: 20px auto;
+  }
+  
+  .Profile h3 {
+    padding-top: 0em; /* Adjust padding */
+    font-size: .8rem; /* Adjust font size */
+}
+
+.Profile p {
+    padding-top: 0.5em;
+    font-size: .6rem; /* Reduce font size */
+    width: 15rem;
+}
+
+
+  .Aboutdescription {
+      width: 90%;
+      font-size: 24px;
+      height: auto;
+  }
+
+  .hobbyContainer,
+  .talents {
+      width: 90%;
+      margin: 20px auto;
+      padding: 20px;
+  }
+
+  .hobbyIcon,
+  .talentsIcon {
+      width: 150px;
+      height: 150px;
+      margin: 10px;
+  }
+
+  .Hobbydescription,
+  .talentsDescription {
+      font-size: 18px;
+      margin: 10px;
+      line-height: 1.5em;
+  }
+
+  .About {
+      padding: 4rem 0;
+      display: block;
+  }
+
+  .hobbyContainer,
+  .talents {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .Profile {
+      width: 90%;
+      margin: 20px auto;
+  }
+
+  .Profile h3 {
+      font-size: 1.2rem;
+  }
+
+  .Aboutdescription {
+      width: 100%;
+      font-size: 18px;
+      height: auto;
+  }
+
+  .hobbyContainer,
+  .talents {
+      width: 100%;
+      padding: 15px;
+  }
+
+  .hobbyIcon,
+  .talentsIcon {
+      width: 120px;
+      height: 120px;
+      margin: 8px;
+  }
+
+  .Hobbydescription,
+  .talentsDescription {
+      font-size: 16px;
+      margin: 8px;
+      line-height: 1.4em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .Profile {
+      width: 16rem; /* Make profile smaller */
+      height: 24rem; /* Make profile smaller */
+      padding: 1.5rem; /* Adjust padding */
+      font-size: 0.5rem; /* Reduce font size */
+  }
+
+  .Profile h3 {
+      padding-top: 0em; /* Adjust padding */
+      font-size: 1rem; /* Adjust font size */
+  }
+
+  .Profile p {
+      padding-top: 0.5em;
+      font-size: .8rem; /* Reduce font size */
+  }
+
+  .Aboutdescription {
+      width: auto; /* Make description smaller */
+      height: auto; /* Make description smaller */
+      font-size: 20px; /* Adjust font size */
+      padding: 20px; /* Adjust padding */
+  }
+
+  .Aboutdescription p {
+      font-size: 14px; /* Reduce font size */
+  }
+
+  .Hobbies {
+      flex-direction: column; /* Stack hobbies vertically */
+      gap: 15px; /* Adjust spacing */
+    
+  }
+
+  .hobbyContainer {
+      width: 80%; /* Adjust width */
+      padding: 30px; /* Adjust padding */
+      
+  }
+
+  .Hobbydescription {
+      font-size: 18px; /* Adjust font size */
+  }
+
+  .talents {
+      flex-direction: column; /* Stack talents vertically */
+      gap: 15px;
+  }
+
+  .talentsIcon {
+      width: 150px; /* Reduce icon size */
+      height: 150px; /* Reduce icon size */
+  }
+
+  .talentsDescription {
+      font-size: 18px; /* Adjust font size */
+  }
+}

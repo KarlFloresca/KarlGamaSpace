@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/experience.css">
+    <link rel="stylesheet" href="./css/projects.css">
+
+    <audio src="./assets/sfx/homeBGM.mp3" id="bgm" autoplay loop></audio>
+    
+    <title>FlorescaKarl</title>
+</head>
+<body>
+    <nav class="navigationBar">
+        <h2>Welcome to my Game<span class="colored">Space</span></h3>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                ☰
+            </button> 
+        <ul class="tabs">
+            <li>
+                <img src="assets/icons/iconHome.png" alt="" class="im">
+                <a href="./index.html">Home</a>
+            </li>
+            <li>
+                <img src="assets/icons/iconExp.png" alt="">
+                <a href="#experience">Experiences</a>
+            </li> 
+            <li>
+                <img src="assets/icons/iconFamily.png" alt="">
+                <a href="#projects">Projects</a>
+            </li> 
+            <li> 
+                <img src="assets/icons/iconProject.png" alt="">
+                <a href="#Skills">Skills</a>
+            </li>
+            <li>
+                <img src="assets/icons/iconGallery.png" alt="">
+                <a href="./html/Gallery.html">Gallery </a>
+            </li>
+           
+            <li>
+                <img src="assets/icons/iconContact.png" alt="">
+                <a href="./html/Contact.html">Contacts</a>
+            </li>
+        </ul>
+    </nav>
+
+  
+   
+
+    <div class="About" id="About">
+        <img src="./assets/icons/iconUFO.png" alt="" class="ufo" id="ufo" onclick="crashUFO(this)">
+        <img src="./assets/icons/iconUFOg.png" alt="" class="ufo" id="ufo" onclick="crashUFO(this)">
+        <img src="./assets/icons/iconUFOr.png" alt="" class="ufo" id="ufo" onclick="crashUFO(this)">
+      
+        <div class="Profile">
+           <img src="./assets/img/imgProfile.jpg" alt="" class="picture">
+            <h3>Suspect, nag it pero dyslexic</h3>
+            <p>Karl Anthony T. Floresca</p>
+            <p>studying BSIT in Camarines Norte State Collage </p></img>
+        </div>
+        <div class="Aboutdescription">
+       
+            
+        </div>
+        <button class="btnChangeDes">
+            <img src="./assets/img/imgButton1.png" alt="">
+        </button>
+        
+    </div>
+    <h1 class="divider"  id="experience">My Experiences</h1>
+    <div class="UnderwaterArea">
+    
+        <div class="Experience">
+            <div class="controls">
+              <button id="controlButton" onclick="toggleScroll()">Pause</button>
+            </div>
+          
+            <div class="experienceList" id="experienceList">
+              <div>
+                <img src="./assets/img/WebProject.png"  alt="Documentation of web project" class="mainImg" />
+                <p>During my first year of college, I collaborated with a small coffee shop to create my very first website</p>
+              </div>
+              <div>
+                <video src="./assets/videos/animation.mp4" autoplay loop></video>
+                <p>Worked with a little animation project in the past</p>
+              </div>
+              <div>
+                <img src="./assets/img/Frameworks.png" alt="" />
+                <p>Outside of school, I’ve been working on learning and immersing myself in different frameworks and libraries for web development</p>
+              </div>
+              <div>
+                <img src="./assets/img/imersion.png" alt="Work immersion documentation" />
+                <p>During my last year of high school, I was deployed for work imersion in my local government unit</p>
+              </div>
+              <div>
+                <img src="./assets/img/Journey.png" alt="">
+                <p>Made my first game during my first year as a BSIT student</p>
+              </div>
+              <div>
+                <img src="./assets/img/FirstPorfolio.png" alt="">
+                <p>Launched my first website during my first year and started freelancing eversince</p>
+              </div>
+            </div>
+          </div>
+          
+        <h1 class="subDiv">My Hobbies</h1>
+        <div class="Hobbies" id="Hobbies">
+           
+            <div class="hobbyContainer" id="hobbyContainer">
+                <img src="" alt="" class="hobbyIcon" id="hobbyIcon">
+                <p class="Hobbydescription" id="Hobbydescription"></p>
+            </div>
+
+            <div class="talents" id="talents">
+                <img src="" alt="" class="talentsIcon" id="talentsIcon">
+                <p class="talentsDescription" id="talentsDescription"></p>
+            </div>
+        </div>
+
+        <div class="bubbleContainer">
+            <img src="./assets/icons/bubble.png" alt="" class="animatedBubble" onclick="popBubble(this)">
+            <img src="./assets/icons/bubble.png" alt="" class="animatedBubble" onclick="popBubble(this)">
+            <img src="./assets/icons/bubble.png" alt="" class="animatedBubble" onclick="popBubble(this)">
+            <img src="./assets/icons/bubble.png" alt="" class="animatedBubble" onclick="popBubble(this)">
+            <img src="./assets/icons/bubble.png" alt="" class="animatedBubble" onclick="popBubble(this)">
+        </div>
+        
+
+        <h1 class="subDiv" id="projects">Some of my Projects</h1>
+        <div class="Projects">
+            <div>
+                <img src="./assets/img/Journey.png" alt="">
+                <a target="_blank" href="https://drive.google.com/drive/folders/1xNh17cJrbGrUVt2EEx1Mi6_AztZXTpj2?usp=drive_link" class="project-link">
+                    Java game I made during first year, the premise was to collect all the missing relics
+                </a>
+                <span class="click-me">Click me</span>
+            </div>
+            <div>
+                <img src="./assets/img/webproject2.png" alt="">
+                <a target="_blank" href="https://drive.google.com/drive/folders/1xNh17cJrbGrUVt2EEx1Mi6_AztZXTpj2?usp=drive_link" class="project-link">
+                    Coffee lounge website made for my first semester project during first year
+                </a>
+                <span class="click-me">Click me</span>
+            </div>
+            <div>
+                <img src="./assets/img/FirstPorfolio.png" alt="">
+                <a  target="_blank" href="https://drive.google.com/drive/folders/1xNh17cJrbGrUVt2EEx1Mi6_AztZXTpj2?usp=drive_link" class="project-link">
+                    My first ever online website that I used up till now
+                </a>
+                <span class="click-me">Click me</span>
+            </div>
+            <div>
+                <img src="./assets/img/orderSystem.png" alt="">
+                <a target="_blank" href="https://drive.google.com/drive/folders/1xNh17cJrbGrUVt2EEx1Mi6_AztZXTpj2?usp=drive_link" class="project-link">
+                    First project that I made in Visual Basic
+                </a>
+                <span class="click-me">Click me</span>
+            </div>
+            <div>
+                <img src="./assets/img/Bookstore.png" alt="">
+                <a target="_blank" href="https://drive.google.com/drive/folders/1xNh17cJrbGrUVt2EEx1Mi6_AztZXTpj2?usp=drive_link" class="project-link">
+                    This is a prototype that I made for HCI, but I will be using it to make a website
+                </a>
+                <span class="click-me">Click me</span>
+            </div>
+            <div>
+                <img src="./assets/img/NewPorfolio.png" alt="">
+                <a target="_blank" href="https://drive.google.com/drive/folders/1xNh17cJrbGrUVt2EEx1Mi6_AztZXTpj2?usp=drive_link" class="project-link">
+                    The current website you are seeing right now
+                </a>
+                <span class="click-me">Click me</span>
+            </div>
+        </div>
+    </div>
+
+
+    <h1 class="divider" id="Skills">Languages, Tools And Knowledge</h1>
+    <div class="material">
+            <h1 class="subDiv">Languages</h1>
+            <div class="languages">
+                <ul>
+                    <li>
+                        <img src="./assets/icons/iconJava.png" alt="" class="PLanguageIcon">
+                        <p class="langName">Java</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/iconJS.png" alt="" class="PLanguageIcon">
+                        <p class="langName">javascript</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/iconHTML.png" alt="" class="PLanguageIcon">
+                        <p class="langName">html</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/iconCss.png" alt="" class="PLanguageIcon">
+                        <p class="langName">css</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/iconCSharp.png" alt="" class="PLanguageIcon">
+                        <p class="langName">c#</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/iconPy.png" alt="" class="PLanguageIcon">
+                        <p class="langName">python</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/iconVB.png" alt="" class="PLanguageIcon">
+                        <p class="langName">VB</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/iconSql.png" alt="" class="PLanguageIcon">
+                        <p class="langName">sql</p>
+                    </li>
+                </ul>
+              
+            </div>
+            <h1 class="subDiv">Tools</h1>
+            <div class="tools">
+                <ul>
+                    <li>
+                        <img src="./assets/icons/iconVS.png" alt="" class="toolIcon">
+                        <p class="toolName">Visual Studio 2022</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/iconVSCode.png" alt="" class="toolIcon">
+                        <p class="toolName">VS Code</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/iconUnity.png" alt="" class="toolIcon">
+                        <p class="toolName">Unity</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/iconFigma.png" alt="" class="toolIcon">
+                        <p class="toolName">Figma</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/iconKrita.png" alt="" class="toolIcon">
+                        <p class="toolName">Krita</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/iconAdobe.png" alt="" class="toolIcon">
+                        <p class="toolName">Adobe photoshop</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/iconFilmora.png" alt="" class="toolIcon">
+                        <p class="toolName">Filmora</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/iconGitHub.png" alt="" class="toolIcon">
+                        <p class="toolName">GitHub</p>
+                    </li>
+                </ul>
+               
+            </div>
+            <h1 class="subDiv">What i'm learning</h1>
+            <div class="learning">
+                <ul>
+                    <li>
+                        <img src="./assets/icons/iconCP.png" alt="" class="learningIcom">
+                        <p class="learningName">c++</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/iconSupaBase.png" alt="" class="learningIcom">
+                        <p class="learningName">Supabase</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/iconDjango.png" alt="" class="learningIcom">
+                        <p class="learningName">Django</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/iconBlender.png" alt="" class="learningIcom">
+                        <p class="learningName">Blender 3D</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/iconTailwind.png" alt="" class="learningIcom">
+                        <p class="learningName">Tailwind CSS</p>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/iconShirt.png" alt="" class="learningIcom">
+                        <p class="learningName">Tshirt Designing</p>
+                    </li>
+                </ul>
+            </div>
+    </div>
+
+
+ 
+  
+    <div class="copyright">
+        © 2024 Karl Anthony T. Floresca. All rights reserved.
+      </div>
+
+</body>
+
+<script src="./javascript/experience.js"></script>
+<script src="./javascript/index.js">
+    
+</script>
+<script src="./javascript/bgm.js"></script>
+
+
+</html>
