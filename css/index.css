@@ -499,15 +499,6 @@ a{
 
 
 
-
-
-
-
-
-
-
-
-
 @media (max-width: 768px) {
 
   .Profile {
@@ -531,20 +522,25 @@ a{
   .Aboutdescription {
       width: auto;
       font-size: 24px;
-      height: auto;
+      height: 26rem;
   }
+  .Hobbies {
+    flex-direction: column; /* Stack hobbies vertically */
+    gap: 15px; /* Adjust spacing */
+}
 
   .hobbyContainer,
   .talents {
       width: 90%;
+      height: 25rem;
       margin: 20px auto;
       padding: 20px;
   }
 
   .hobbyIcon,
   .talentsIcon {
-      width: 150px;
-      height: 150px;
+      width: 250px;
+      height: 250px;
       margin: 10px;
   }
 
@@ -568,6 +564,15 @@ a{
 }
 
 
+@media screen and (max-width: 430px) {
+  .Aboutdescription {
+    width: auto;
+    height: 50rem; /* Make description smaller */
+    
+}
+}
+
+
 @media screen and (max-width: 320px) {
   .Profile {
       width: 16rem; /* Make profile smaller */
@@ -588,19 +593,15 @@ a{
 
   .Aboutdescription {
       width: auto; /* Make description smaller */
-      height: auto; /* Make description smaller */
+      height: 100%; /* Make description smaller */
       font-size: 20px; /* Adjust font size */
       padding: 20px; /* Adjust padding */
   }
 
-  .Aboutdescription p {
-      font-size: 14px; /* Reduce font size */
-  }
 
   .Hobbies {
       flex-direction: column; /* Stack hobbies vertically */
       gap: 15px; /* Adjust spacing */
-    
   }
 
   .hobbyContainer {
