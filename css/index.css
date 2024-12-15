@@ -529,7 +529,7 @@ a{
 
 
   .Aboutdescription {
-      width: 90%;
+      width: auto;
       font-size: 24px;
       height: auto;
   }
@@ -567,42 +567,6 @@ a{
   }
 }
 
-@media (max-width: 480px) {
-  .Profile {
-      width: 90%;
-      margin: 20px auto;
-  }
-
-  .Profile h3 {
-      font-size: 1.2rem;
-  }
-
-  .Aboutdescription {
-      width: 100%;
-      font-size: 18px;
-      height: auto;
-  }
-
-  .hobbyContainer,
-  .talents {
-      width: 100%;
-      padding: 15px;
-  }
-
-  .hobbyIcon,
-  .talentsIcon {
-      width: 120px;
-      height: 120px;
-      margin: 8px;
-  }
-
-  .Hobbydescription,
-  .talentsDescription {
-      font-size: 16px;
-      margin: 8px;
-      line-height: 1.4em;
-  }
-}
 
 @media screen and (max-width: 320px) {
   .Profile {

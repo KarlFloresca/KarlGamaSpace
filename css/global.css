@@ -47,7 +47,7 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
-    width: 100%;
+    width: auto;
     background-color: #121212;          
     color: rgb(255, 255, 255);
     z-index: 100;
@@ -191,7 +191,76 @@ section {
         font-size: 0.9rem;
         padding: 1rem;
     }
-}@media (max-width: 320px) {
+}
+
+@media (max-width: 440px) {
+    .navigationBar {
+        width: auto;
+        padding: 12px 20px; /* Adjusted padding for a balanced look */
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    .tabs {
+        display: none;
+        flex-direction: column;
+        gap: 1rem; /* Moderate spacing between items */
+        width: 65%; /* Slightly wider for mid-size screens */
+        height: 100vh;
+        background-color: #121212;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        padding: 1.2rem; /* Comfortable padding */
+        box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
+        transition: left 0.3s ease-in-out;
+        z-index: 200;
+    }
+
+    .tabs li {
+        padding-left: 10px;
+        font-size: 1rem; /* Comfortable font size */
+    }
+
+    .tabs.active {
+        display: flex;
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 10px; 
+        right: 20px;
+        font-size: 1.5rem; /* Moderate size for visibility */
+        color: #ffffff;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 300;
+    }
+
+    .divider {
+        
+        font-size: 1.8rem; /* Adjusted font size for visibility */
+        padding: 1.8rem;
+    }
+
+    .subDiv {
+        font-size: 1.2em; /* Font size for clear text visibility */
+        padding: 0.8rem;
+        margin: 1.5rem auto;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+}
+
+
+@media (max-width: 320px) {
     .navigationBar {
         width: auto;
         padding: 10px;
@@ -251,5 +320,7 @@ section {
     .copyright {
         font-size: 0.7rem; /* Smaller font for copyright */
     }
+
+    
 }
 

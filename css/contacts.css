@@ -85,9 +85,7 @@ section div {
   bottom: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
 }
-
 .animatedBubble {
   width: 40px;
   position: absolute;
@@ -188,7 +186,7 @@ section div {
       margin-left: 0.5em;
   }
   .HEAD {
-      margin-top: 4rem;
+      margin-top: 1rem;
       font-size: 1.5em;
   }
   .icons {
